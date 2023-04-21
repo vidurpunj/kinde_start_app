@@ -2,6 +2,7 @@ class HelloController < ApplicationController
   before_action :init_mgmt_client, only: [:mgmt_index, :create_organization]
 
   def index
+    @session = session[:kinde_auth]
   end
 
   def mgmt_index
